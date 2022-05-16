@@ -1,0 +1,21 @@
+export interface INoti {
+  send(type: EmailNotiType, data: any): Promise<void>;
+}
+
+export enum EmailNotiType {
+  WITHDRAW_REQUEST = 'WITHDRAW_REQUEST', //확인
+  DEPTRATIO_ALARM = 'DEPTRATIO_ALARM', //확인
+  LIQUIDATION_DONE = 'LIQUIDATION_DONE', //확인
+  SETTLEMENT_DONE = 'SETTLEMENT_DONE', //확인
+  LIQUIDATION_PREALARM = 'LIQUIDATION_PREALARM', //확인
+  WITHDARW = 'WITHDARW', //확인
+
+  CHANGE_PW = 'CHANGE_PW',
+  ENABLE_OTP = 'ENABLE_OTP',
+  DISENABLE_OTP = 'DISENABLE_OTP',
+  SIGN_UP = 'SIGN_UP',
+  VERIFY_SIGN_UP = 'VERIFY_SIGN_UP',
+  FIND_PW = 'FIND_PW',
+  DEPOSIT = 'DEPOSIT',
+  DIFF_IP = 'DIFF_IP',
+}
